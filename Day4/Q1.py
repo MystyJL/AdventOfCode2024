@@ -41,13 +41,14 @@ def find(input,coords):
                 counter+=1
     return counter
 
-
-file = open("input.txt","r")
-wordsearch = file.read().strip()
-wordsearch = wordsearch.split("\n")
-xmas = 0
-for i in range(len(wordsearch)):
-    for j in range(len(wordsearch[0])):
-        if wordsearch[i][j] == "X":
-            xmas+=find(wordsearch,[i,j])
-print(xmas)
+def onestar():
+    file = open("input.txt","r")
+    wordsearch = file.read().strip()
+    wordsearch = wordsearch.split("\n")
+    xmas = 0
+    for i in range(len(wordsearch)):
+        for j in range(len(wordsearch[0])):
+            if wordsearch[i][j] == "X":
+                xmas+=find(wordsearch,[i,j])
+    print(xmas)
+onestar()
