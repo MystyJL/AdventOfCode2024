@@ -1,3 +1,5 @@
+import time
+time_start = time.time()
 def findGuard(map):
     for i in range(len(map)):
         for j in range(len(map[0])):
@@ -66,3 +68,7 @@ for i in Xcoords:
             coord = forward
     map[i[0]][i[1]] = "X"
 print(loops)
+# Save timestamp
+end = time.time()
+
+print(end - time_start)
