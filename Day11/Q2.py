@@ -39,6 +39,8 @@ max = 0
 file = open("input.txt","r")
 stones = file.read().strip().split(" ")
 stones = [int(x) for x in stones]
+
+# main
 countGlobe = {}
 top50 = {}
 for i in range(10):
@@ -52,7 +54,6 @@ for i in range(35):
     stones = temp
 total = 0
 counter = 0
-print("done",len(stones))
 for i in stones:
     if i not in top50:
         top50[i] = calc50(i)
